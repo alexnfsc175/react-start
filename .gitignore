@@ -10,6 +10,7 @@ lib-cov
 .lock-wscript
 build/Release
 node_modules
+dist
 .idea
 jspm_packages
 .npm
@@ -32,8 +33,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-/dist/react-filepicker.js.map
-/dist/demo.js.map
 .DS_Store
 firebase.json
 .firebaserc

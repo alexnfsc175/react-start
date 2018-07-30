@@ -1,25 +1,41 @@
 const webpack = require('webpack');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const paths = require('./webpack-paths'); 
+const paths = require('./webpack-paths');
 
 
 exports.htmlPlugin = new HtmlWebpackPlugin({
-    template: path.join(paths.src, 'index.html')
+  template: path.join(paths.src, 'index.html')
 });
 
-exports.extractText = new ExtractTextPlugin('app.style.css', {allChunks: true});
+// exports.extractText = new ExtractTextPlugin('app.style.css', {allChunks: true});
+exports.extractText = (devMode) => {
+  return new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: devMode ? '[name].css' : '[name].[hash].css',
+    chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+  })
+};
 
-exports.manifest = new ManifestPlugin({fileName: 'asset-manifest.json'}),
+exports.manifest = new ManifestPlugin({
+    fileName: 'asset-manifest.json'
+  }),
 
-exports.jqueryPlugin = new webpack.ProvidePlugin({'window.$': 'jquery', 'window.jQuery': 'jquery'});
+  exports.jqueryPlugin = new webpack.ProvidePlugin({
+    'window.$': 'jquery',
+    'window.jQuery': 'jquery'
+  });
 
-exports.popperPlugin = new webpack.ProvidePlugin({'window.Popper': 'popper.js'});
+exports.popperPlugin = new webpack.ProvidePlugin({
+  'window.Popper': 'popper.js'
+});
 
 exports.HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
 
@@ -35,15 +51,15 @@ exports.environmentVariables = new webpack.DefinePlugin({
   },
 });
 
-exports.uglifyJs = new webpack.optimize.UglifyJsPlugin({
-  output: {
-    comments: false,
-  },
-  compress: {
-    warnings: false,
-    drop_console: true,
-  },
-});
+// exports.uglifyJs = new webpack.optimize.UglifyJsPlugin({
+//   output: {
+//     comments: false,
+//   },
+//   compress: {
+//     warnings: false,
+//     drop_console: true,
+//   },
+// });
 
 
 exports.sw = new SWPrecacheWebpackPlugin({
@@ -66,6 +82,6 @@ exports.sw = new SWPrecacheWebpackPlugin({
 });
 
 exports.copy = new CopyWebpackPlugin([
-    'src/manifest.json',
-    'src/logo.png'
+  'src/manifest.json',
+  'src/logo.png'
 ]);

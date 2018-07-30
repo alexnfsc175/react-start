@@ -1,0 +1,220 @@
+/* Column */
+
+.deprecatedColumn {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .xsCol0 {
+    width: 0;
+  }
+  
+  .xsCol1 {
+    composes: xsCol1 from "./Column.scss";
+  }
+  
+  .xsCol2 {
+    composes: xsCol2 from "./Column.scss";
+  }
+  
+  .xsCol3 {
+    composes: xsCol3 from "./Column.scss";
+  }
+  
+  .xsCol4 {
+    composes: xsCol4 from "./Column.scss";
+  }
+  
+  .xsCol5 {
+    composes: xsCol5 from "./Column.scss";
+  }
+  
+  .xsCol6 {
+    composes: xsCol6 from "./Column.scss";
+  }
+  
+  .xsCol7 {
+    composes: xsCol7 from "./Column.scss";
+  }
+  
+  .xsCol8 {
+    composes: xsCol8 from "./Column.scss";
+  }
+  
+  .xsCol9 {
+    composes: xsCol9 from "./Column.scss";
+  }
+  
+  .xsCol10 {
+    composes: xsCol10 from "./Column.scss";
+  }
+  
+  .xsCol11 {
+    composes: xsCol11 from "./Column.scss";
+  }
+  
+  .xsCol12 {
+    composes: xsCol12 from "./Column.scss";
+  }
+  
+  @media (--sm) {
+    .smCol0 {
+      width: 0;
+    }
+  
+    .smCol1 {
+      composes: smCol1 from "./Column.scss";
+    }
+  
+    .smCol2 {
+      composes: smCol2 from "./Column.scss";
+    }
+  
+    .smCol3 {
+      composes: smCol3 from "./Column.scss";
+    }
+  
+    .smCol4 {
+      composes: smCol4 from "./Column.scss";
+    }
+  
+    .smCol5 {
+      composes: smCol5 from "./Column.scss";
+    }
+  
+    .smCol6 {
+      composes: smCol6 from "./Column.scss";
+    }
+  
+    .smCol7 {
+      composes: smCol7 from "./Column.scss";
+    }
+  
+    .smCol8 {
+      composes: smCol8 from "./Column.scss";
+    }
+  
+    .smCol9 {
+      composes: smCol9 from "./Column.scss";
+    }
+  
+    .smCol10 {
+      composes: smCol10 from "./Column.scss";
+    }
+  
+    .smCol11 {
+      composes: smCol11 from "./Column.scss";
+    }
+  
+    .smCol12 {
+      composes: smCol12 from "./Column.scss";
+    }
+  }
+  
+  @media (--md) {
+    .mdCol0 {
+      width: 0;
+    }
+  
+    .mdCol1 {
+      composes: mdCol1 from "./Column.scss";
+    }
+  
+    .mdCol2 {
+      composes: mdCol2 from "./Column.scss";
+    }
+  
+    .mdCol3 {
+      composes: mdCol3 from "./Column.scss";
+    }
+  
+    .mdCol4 {
+      composes: mdCol4 from "./Column.scss";
+    }
+  
+    .mdCol5 {
+      composes: mdCol5 from "./Column.scss";
+    }
+  
+    .mdCol6 {
+      composes: mdCol6 from "./Column.scss";
+    }
+  
+    .mdCol7 {
+      composes: mdCol7 from "./Column.scss";
+    }
+  
+    .mdCol8 {
+      composes: mdCol8 from "./Column.scss";
+    }
+  
+    .mdCol9 {
+      composes: mdCol9 from "./Column.scss";
+    }
+  
+    .mdCol10 {
+      composes: mdCol10 from "./Column.scss";
+    }
+  
+    .mdCol11 {
+      composes: mdCol11 from "./Column.scss";
+    }
+  
+    .mdCol12 {
+      composes: mdCol12 from "./Column.scss";
+    }
+  }
+  
+  @media (--lg) {
+    .lgCol0 {
+      width: 0;
+    }
+  
+    .lgCol1 {
+      composes: lgCol1 from "./Column.scss";
+    }
+  
+    .lgCol2 {
+      composes: lgCol2 from "./Column.scss";
+    }
+  
+    .lgCol3 {
+      composes: lgCol3 from "./Column.scss";
+    }
+  
+    .lgCol4 {
+      composes: lgCol4 from "./Column.scss";
+    }
+  
+    .lgCol5 {
+      composes: lgCol5 from "./Column.scss";
+    }
+  
+    .lgCol6 {
+      composes: lgCol6 from "./Column.scss";
+    }
+  
+    .lgCol7 {
+      composes: lgCol7 from "./Column.scss";
+    }
+  
+    .lgCol8 {
+      composes: lgCol8 from "./Column.scss";
+    }
+  
+    .lgCol9 {
+      composes: lgCol9 from "./Column.scss";
+    }
+  
+    .lgCol10 {
+      composes: lgCol10 from "./Column.scss";
+    }
+  
+    .lgCol11 {
+      composes: lgCol11 from "./Column.scss";
+    }
+  
+    .lgCol12 {
+      composes: lgCol12 from "./Column.scss";
+    }
+  }
